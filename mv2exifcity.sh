@@ -2,7 +2,7 @@
 
 # Intro and licensing
 if [ $# -eq 0 ]; then
-  echo "This script will prepend the names of cities where the shots were taken to the filenames of JPEG files provided as arguments. It makes use of reverse geocoding via OpenStreetMap Nominatim."
+  echo "This script will prepend the names of cities where the shoots were taken to the filenames of JPEG files provided as arguments. It makes use of reverse geocoding via OpenStreetMap Nominatim."
   echo "https://github.com/eugrus/photonomennovum";
   echo "The following terms apply: https://creativecommons.org/licenses/by-nc-sa/3.0/de/deed.en"; echo ""
   exit 1
