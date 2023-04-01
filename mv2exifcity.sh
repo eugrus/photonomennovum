@@ -39,11 +39,11 @@ for file in "$@"; do
             # Use the OpenStreetMap Nominatim API to reverse geocode: https://nominatim.org/release-docs/latest/api/Reverse/
             url="https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}"
             city=$(curl -s "$url" | jq -r '.address.city')
-            echo The city is "$city"
 
             # If a city was found, rename the file with the city name prepended to the original name
             if [ -n "$city" ]; then
-                newname="${city} ${file}"
+                echo The city is "$city"
+		newname="${city} ${file}"
                 mv "$file" "$newname"
                 echo "Renamed $file to $newname"
             else
