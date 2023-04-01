@@ -3,7 +3,7 @@
 # Intro and licensing
 if [ $# -eq 0 ]; then
   echo "This script will prepend the name of a city where the shot was taken to the filenames of JPEG files provided as arguments."
-  echo "https://github.com/eugrus/";
+  echo "https://github.com/eugrus/photonomennovum";
   echo "The following terms apply: https://creativecommons.org/licenses/by-nc-sa/3.0/de/deed.en"; echo ""
   exit 1
 fi
