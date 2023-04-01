@@ -41,13 +41,13 @@ for file in "$@"; do
             city=$(curl -s "$url" | jq -r '.address.city')
 
             # If a city was found, rename the file with the city name prepended to the original name
-            if [ -n "$city" ]; then
+            if [ -n "$city" && "$city" != "null" ]; then
                 echo The city is "$city"
 		newname="${city} ${file}"
                 mv "$file" "$newname"
                 echo "Renamed $file to $newname"
-            else
-                echo "Skipping $file as no city was found for its geo-coordinates"
+                else
+                    echo "Skipping $file as no city was found for its geo-coordinates"
 	    fi
             else
                 echo "Skipping $file as no geo-coordinates are present"
