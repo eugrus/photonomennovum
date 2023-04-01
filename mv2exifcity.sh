@@ -46,9 +46,13 @@ for file in "$@"; do
                 newname="${city} ${file}"
                 mv "$file" "$newname"
                 echo "Renamed $file to $newname"
-            fi
-        fi
+            else
+                echo "Skipping $file as no city was found for its geo-coordinates"
+	    fi
+            else
+                echo "Skipping $file as no geo-coordinates are present"
+	fi
     else
-        echo Skipping "$file" as it is not a JPEG file
+        echo "Skipping "$file" as it is not a JPEG file"
     fi
 done
