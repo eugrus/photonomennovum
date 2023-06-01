@@ -9,7 +9,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Check for dependencies
-tools=(curl exiftool jq sed)
+tools=(curl exiftool file jq sed)
 missing=()
 for tool in "${tools[@]}"; do
   command -v $tool > /dev/null || missing+=($tool)
